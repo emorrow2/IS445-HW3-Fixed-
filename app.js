@@ -23,7 +23,7 @@ function arrayBuilder() {
         document.getElementById('array').innerHTML = 'step cannot be 0, enter a positive or negative integer';
     }
 
-    if (stepValue !== 0 && stepValue !== Int && startValue !== Int && endValue !== Int) {
+    if (stepValue !== 0 && Number.isInteger(stepValue) && Number.isInteger(startValue) && Number.isInteger(endValue)) {
         let arrayValue = startValue
         arraySet.push(arrayValue)
         let binaryValue = arrayValue.toString(2);
