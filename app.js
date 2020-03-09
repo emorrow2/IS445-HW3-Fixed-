@@ -9,7 +9,6 @@ function arrayBuilder() {
     let stepInput = prompt('Please enter step integer value');
     let stepValue = parseInt(stepInput)
 
-    console.log(startValue), console.log(endValue), console.log(stepValue);
 
     if (isNaN(startValue)) {
         document.getElementById('array').innerHTML = 'Please refresh and enter a valid starting integer';
@@ -24,7 +23,7 @@ function arrayBuilder() {
         document.getElementById('array').innerHTML = 'step cannot be 0, enter a positive or negative integer';
     }
 
-    if (stepValue !== 0) {
+    if (stepValue !== 0 && stepValue !== Int && startValue !== Int && endValue !== Int) {
         let arrayValue = startValue
         arraySet.push(arrayValue)
         let binaryValue = arrayValue.toString(2);
@@ -62,5 +61,6 @@ function arrayBuilder() {
         document.getElementById('binary').innerHTML = ('The binary of absolute element values are: ' + binarySet);
     }
 }
+
 
 arrayBuilder();
